@@ -1,0 +1,14 @@
+
+
+
+.navbar {
+    display: flex;
+
+}
+
+.menu-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
