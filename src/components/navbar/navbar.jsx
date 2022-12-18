@@ -1,6 +1,9 @@
 import React from "react";
 import './styles.css'
 import search from './assets/buscar.png'
+import user from './assets/user.png'
+import cart from './assets/bolso-shopping-cuadrado-con-asa.png'
+
 
 const Navbar = () => {
     return (
@@ -14,17 +17,21 @@ const Navbar = () => {
 
             <div className="menu">
                 <ul className="menu-list">
-                    <li className="item">Inicio</li>
-                    <li className="item">Accesorios</li>
-                    <li className="item">Consumibles</li>
-                    <li className="item">Nosotros</li>
-                    <li className="item">Contacto</li>
+                    <a href="#" className="menu-ancors"><li className="item">Inicio</li></a>
+                    <a href="#" className="menu-ancors"><li className="item">Accesorios</li></a>
+                    <a href="#" className="menu-ancors"><li className="item">Consumibles</li></a>
+                    <a href="#" className="menu-ancors"><li className="item">Nosotros</li></a>
+                    <a href="#" className="menu-ancors"><li className="item">Contacto</li></a>
                 </ul>
             </div>
 
-            <div className="icons">
+            <div className="icons-container">
 
-                <img src={search} alt="search icon" ></img>
+                <a href="#" className="icon-ancors"><img src={search} alt="search icon" className="icon" ></img></a>
+
+                <a href="#" className="icon-ancors"><img src={user} alt="user icon" className="icon" ></img></a>
+
+                <a href="#" className="icon-ancors"><img src={cart} alt="cart icon" className="icon" ></img></a>
 
             </div>
             
