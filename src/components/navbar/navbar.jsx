@@ -31,7 +31,15 @@ const Navbar = () => {
 
                 <a href="#" className="icon-ancors"><img src={user} alt="user icon" className="icon" ></img></a>
 
-                <a href="#" className="icon-ancors"><img src={cart} alt="cart icon" className="icon" ></img></a>
+                <div>
+                    <a href="#">
+                        <img src={cart} alt="cart icon" className="icon" ></img>
+                        <div className="items-number-cart-container">
+                            <span className="items-number-cart">0</span>
+                        </div>
+                        
+                    </a>
+                </div>
 
             </div>
             
