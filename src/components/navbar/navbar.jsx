@@ -1,3 +1,4 @@
+
 import React from "react";
 import './styles.css'
 import search from './assets/buscar.png'
@@ -5,8 +6,10 @@ import user from './assets/user.png'
 import cart from './assets/bolso-shopping-cuadrado-con-asa.png'
 
 
-const Navbar = () => {
+const Navbar = ({numberOfItems = 0, onHandlerCart}) => {
+
     return (
+
         <div className="navbar">
 
             <div className="brand">
@@ -32,17 +35,17 @@ const Navbar = () => {
                 <a href="#" className="icon-ancors"><img src={user} alt="user icon" className="icon" ></img></a>
 
                 <div>
-                    <a href="#">
+                    <a onClick={onHandlerCart} href="#">
                         <img src={cart} alt="cart icon" className="icon" ></img>
                         <div className="items-number-cart-container">
-                            <span className="items-number-cart">0</span>
+                            <span className="items-number-cart"> {numberOfItems} </span>
                         </div>
                         
                     </a>
                 </div>
 
             </div>
-            
+
         </div>
     )
 }
