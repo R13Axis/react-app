@@ -17,7 +17,9 @@
 .brand {
     padding-left: 3rem;
     color: #004AC7;
-    
+    text-decoration: none;
+    font-size: 20px;
+    display: flex;
 }
 
 .brand:hover {
@@ -78,8 +80,8 @@
     align-items: center;
     color: white;
     position: absolute;
-    top: 1.5em;
-    right: 3.1em;
+    top: 1.8em;
+    right: 4em;
 }
 
 .items-number-cart {

@@ -1,28 +1,23 @@
-import { useState } from 'react';
+import React from 'react';
 import './styles.css';
-import Navbar from '../../components/navbar/navbar';
-import Sidebar from '../../components/sidebar/sidebar';
+import {PRODUCTS} from '../../constants/products';
+import Card from '../../components/card';
+
+
 
 const Home = () => {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const onHandlerCart = () => {
-    setIsOpen(!isOpen)
-  }
-
-
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <Sidebar onClose={onHandlerCart} isOpen={isOpen}>
-          <h3>Item list</h3>
-        </Sidebar>
-        <Navbar numberOfItems={0} onHandlerCart={onHandlerCart}>
-        </Navbar>
-      </header>
+    <div className="container">
+      <h1>Productos destacados</h1>
+        <div className='products-container'>
+        {PRODUCTS.map((product) => (
+          <Card product={product} key={product.name} />
+        ))}
+      </div>
+
     </div>
-  );
+  )
 }
 
 export default Home;

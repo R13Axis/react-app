@@ -4,6 +4,7 @@ import './styles.css'
 import search from './assets/buscar.png'
 import user from './assets/user.png'
 import cart from './assets/bolso-shopping-cuadrado-con-asa.png'
+import { Link } from "react-router-dom";
 
 
 const Navbar = ({numberOfItems = 0, onHandlerCart}) => {
@@ -12,9 +13,9 @@ const Navbar = ({numberOfItems = 0, onHandlerCart}) => {
 
         <div className="navbar">
 
-            <div className="brand">
+            <div>
 
-                <h1>Gaming Cloud</h1>
+                <Link to={'/home'} className="brand"><h1>Gaming Cloud</h1></Link>
 
             </div>
 
